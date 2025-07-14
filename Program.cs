@@ -22,7 +22,7 @@ namespace APIVersioningDotNetCore
                 options.ApiVersionReader = ApiVersionReader.Combine(
                     new QueryStringApiVersionReader("api-version"),
                     new HeaderApiVersionReader("x-api-version")
-                    );
+                );
             }).AddMvc(options =>
             {
                 options.Conventions.Add(new VersionByNamespaceConvention());
